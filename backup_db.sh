@@ -3,7 +3,7 @@
 # Define variables
 DB_USER="postgres"
 DB_NAME="postgres"
-BACKUP_DIR="/usr/local/var/postgresql@14/feanor/backups"  # Update this path accordingly
+BACKUP_DIR="/usr/local/var/postgresql@14/backups"  # Update this path accordingly
 
 # Generate timestamp
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
