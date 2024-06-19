@@ -12,7 +12,7 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_backup_${TIMESTAMP}.sql"
 
 # Perform backup
-pg_dump -U $DB_USER -Fc $DB_NAME > $BACKUP_FILE
+pg_dump -U $DB_USER -d $DB_NAME > $BACKUP_FILE
 
 # Add backup file to Git
 cd $BACKUP_DIR
