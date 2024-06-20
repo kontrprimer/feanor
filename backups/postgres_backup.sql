@@ -109,7 +109,8 @@ CREATE TABLE indoor_plants.plant_types (
     plant_type character varying(100) NOT NULL,
     id_light integer,
     temp_min integer,
-    temp_max integer
+    temp_max integer,
+    soil_type integer
 );
 
 
@@ -200,35 +201,35 @@ COPY indoor_plants.events (id_event, id_event_type, event_date, id_plant) FROM s
 -- Data for Name: plant_types; Type: TABLE DATA; Schema: indoor_plants; Owner: yuliyastasyuk
 --
 
-COPY indoor_plants.plant_types (id_plant_type, plant_type, id_light, temp_min, temp_max) FROM stdin;
-1	Sedum	1	10	30
-18	Aloe Vera	1	15	25
-19	Jade Plant	1	18	24
-2	Tradescantia "Purple Heart"	2	15	25
-3	Tradescantia "Zebrina"	2	15	25
-4	Epipremnum "Happy Leaf"	2	18	27
-5	Variegated Croton	2	18	27
-6	Flaming Katy	2	18	24
-7	Alligator Plant	2	18	24
-9	Tradescantia Nanouk	2	18	24
-10	Hoya Carnosa Albomarginata	2	18	24
-11	Philodendron Moonshine	2	18	24
-15	Maranta Fascinator	2	18	24
-20	Tradescantia Turtle Vine	2	18	24
-21	Codiaeum variegatum "Aucubaefolia"	2	18	27
-8	Oxalis "Plum Crazy"	3	18	24
-17	Christmas Cactus	3	15	25
-12	Crassula	4	18	24
-13	Ficus Tineke	4	18	27
-14	Ficus Robusta "Belize"	4	18	27
-22	Spider Plant	4	18	24
-23	Chinese Money Plant	4	18	24
-24	Polka Dot	4	18	24
-16	Haworthia	5	18	24
-25	Calathea "Freddie"	6	18	24
-28	Blue Chalksticks	6	18	24
-26	Mint	7	15	25
-27	Rosemary	7	15	25
+COPY indoor_plants.plant_types (id_plant_type, plant_type, id_light, temp_min, temp_max, soil_type) FROM stdin;
+1	Sedum	1	10	30	\N
+18	Aloe Vera	1	15	25	\N
+19	Jade Plant	1	18	24	\N
+2	Tradescantia "Purple Heart"	2	15	25	\N
+3	Tradescantia "Zebrina"	2	15	25	\N
+4	Epipremnum "Happy Leaf"	2	18	27	\N
+5	Variegated Croton	2	18	27	\N
+6	Flaming Katy	2	18	24	\N
+7	Alligator Plant	2	18	24	\N
+9	Tradescantia Nanouk	2	18	24	\N
+10	Hoya Carnosa Albomarginata	2	18	24	\N
+11	Philodendron Moonshine	2	18	24	\N
+15	Maranta Fascinator	2	18	24	\N
+20	Tradescantia Turtle Vine	2	18	24	\N
+21	Codiaeum variegatum "Aucubaefolia"	2	18	27	\N
+8	Oxalis "Plum Crazy"	3	18	24	\N
+17	Christmas Cactus	3	15	25	\N
+12	Crassula	4	18	24	\N
+13	Ficus Tineke	4	18	27	\N
+14	Ficus Robusta "Belize"	4	18	27	\N
+22	Spider Plant	4	18	24	\N
+23	Chinese Money Plant	4	18	24	\N
+24	Polka Dot	4	18	24	\N
+16	Haworthia	5	18	24	\N
+25	Calathea "Freddie"	6	18	24	\N
+28	Blue Chalksticks	6	18	24	\N
+26	Mint	7	15	25	\N
+27	Rosemary	7	15	25	\N
 \.
 
 
